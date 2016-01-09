@@ -1,0 +1,4 @@
+{
+    "ruby": "/path/to/ruby_executable_hooks",
+    "istats": "/path/to/istats"
+}

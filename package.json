@@ -1,0 +1,37 @@
+{
+  "name": "bitbar-weather",
+  "description": "show temperature in menu-bar",
+  "version": "1.0.0",
+  "homepage": "https://github.com/jsfi/bitbar-weather#readme",
+  "author": {
+    "name": "Martin Sachse",
+    "email": "martin.sachse@gmail.com",
+    "url": "http://jsfi.io"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jsfi/bitbar-weather.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jsfi/bitbar-weather/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "keywords": [
+    "bitbar",
+    "weather underground",
+    "temperature"
+  ],
+  "dependencies": {
+    "got": "^6.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^1.10.3"
+  }
+}
