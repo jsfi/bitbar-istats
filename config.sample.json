@@ -1,4 +1,4 @@
 {
-    "ruby": "/path/to/ruby_executable_hooks",
-    "istats": "/path/to/istats"
+    "rvmExec": "/path/to/bin/rvm-exec",
+    "istatsGem": "/path/to/gems/iStats-x.x.x/bin/istats"
 }

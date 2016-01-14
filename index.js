@@ -3,8 +3,11 @@
 'use strict';
 
 const exec = require('child_process').exec;
+const config = require('./config');
 
-exec(`istats`, function(error, stdout, stderr) {
+let istats = (config.rvmExec && config.istatsGem)? `${config.rvmExec} ${config.istatsGem}` : 'istats';
+
+exec(istats, function(error, stdout, stderr) {
     if (error) {
         console.log(error);
     }
