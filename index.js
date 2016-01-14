@@ -35,6 +35,10 @@ exec(istats, function(error, stdout, stderr) {
     lines.filter(line => line.match(/Core \d+ temp/)).map(line => {
         logMatch(line, /Core.*?°/);
     });
+
+    lines.filter(line => line.match('Battery temp')).map(line => {
+        logMatch(line, /Battery.*?°/);
+    });
 });
 
 function logMatch(line, reg) {
