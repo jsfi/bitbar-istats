@@ -24,6 +24,17 @@ istats enable TC3C
 istats enable TC4C
 ```
 
-## TODO
+## RVM
 
-Currently not working with RVM
+Path to binaries (rvmExec and iStats) is now configurable.
+
+```shell
+cp config.sample.json config.json
+```
+
+```js
+{
+    "rvmExec": "$HOME/.rvm/bin/rvm-exec",
+    "istats": "$HOME/.rvm/gems/ruby-x.y.z/gems/iStats-a.b.c/bin/istats"
+}
+```

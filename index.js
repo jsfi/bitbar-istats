@@ -3,9 +3,11 @@
 'use strict';
 
 const exec = require('child_process').exec;
-const config = require('./config');
+let config;
 
-let istats = (config.rvmExec && config.istatsGem)? `${config.rvmExec} ${config.istatsGem}` : 'istats';
+try { config = require('./config'); } catch(e) { config = {}; }
+
+let istats = (config.rvmExec && config.istats)? `${config.rvmExec} ${config.istats}` : 'istats';
 
 exec(istats, function(error, stdout, stderr) {
     if (error) {
@@ -22,7 +24,7 @@ exec(istats, function(error, stdout, stderr) {
 
     let lines = stdout.split('\n');
 
-    lines.filter(line => ~line.indexOf('CPU temp')).map(line => {
+    lines.filter(line => line.match('CPU temp')).map(line => {
         logMatch(line, /\d+(\.\d+)°/);
     });
 
